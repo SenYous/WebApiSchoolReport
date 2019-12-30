@@ -21,6 +21,7 @@ namespace Models
 		/// <summary>
 		/// 
 		/// </summary>
+		[DHelper.Attributes.SqlField(Ignore: false, Key: true, identity: true)]
 		public int id
 		{
 			set { _id = value; }

@@ -3,3 +3,6 @@ F:\Repos\WebApiSchoolReport\WebApiSchoolReport\Models\bin\Release\Models.pdb
 F:\Repos\WebApiSchoolReport\WebApiSchoolReport\Models\obj\Release\Models.csprojAssemblyReference.cache
 F:\Repos\WebApiSchoolReport\WebApiSchoolReport\Models\obj\Release\Models.dll
 F:\Repos\WebApiSchoolReport\WebApiSchoolReport\Models\obj\Release\Models.pdb
+F:\Repos\WebApiSchoolReport\WebApiSchoolReport\Models\bin\Release\DHelper.dll
+F:\Repos\WebApiSchoolReport\WebApiSchoolReport\Models\bin\Release\mysql.data.dll
+F:\Repos\WebApiSchoolReport\WebApiSchoolReport\Models\obj\Release\Models.csproj.CopyComplete

@@ -31,6 +31,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DHelper">
+      <HintPath>..\lib\DHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="mysql.data">
+      <HintPath>..\lib\mysql.data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,7 +50,9 @@
     <Compile Include="ApiReplyModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="tbl_appInfo.cs" />
+    <Compile Include="tbl_city.cs" />
     <Compile Include="tbl_user.cs" />
+    <Compile Include="tbl_userInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -80,22 +80,64 @@ namespace DAL.Response
             aj.isSuccess = false;
             if (model != null && !string.IsNullOrEmpty(model.token))
             {
-                tbl_user modelUser = DHelper.DapperC.SelectSingle<tbl_user>(null, " token='" + model.token + "'", "");
+                tbl_user modelUser = DHelper.DapperC.SelectSingle<tbl_user>(new { token = model.token }, " token=@token", "");
+                tbl_userInfo modelUserInfo = DHelper.DapperC.SelectSingle<tbl_userInfo>(new { token = model.token }, " token=@token", "updatetime desc");
                 if (modelUser != null)
                 {
                     modelUser.uptime = DateTime.Now;
                     DHelper.DapperC.Update(modelUser);
+
+                    if (modelUserInfo == null)
+                    {
+                        aj.code = 1000;
+                    }
+                    else
+                    {
+                        var addTimes = Convert.ToDateTime(modelUserInfo.addtime);
+                        //创建时间小于去年9月
+                        if (addTimes < Convert.ToDateTime((DateTime.Now.Year - 1) + "-09-01"))
+                        {
+                            aj.code = 1001;
+                        }
+                        else
+                        {
+                            aj.code = 2000;
+                        }
+                    }
                 }
                 else
                 {
                     model.usertype = 1;
                     model.status = 1;
+                    model.usertype = 0;
                     model.addtime = DateTime.Now;
                     model.uptime = DateTime.Now;
                     DHelper.DapperC.Insert(model);
+
+                    aj.code = 1000;
                 }
                 aj.isSuccess = true;
             }
+            return aj;
+        }
+        #endregion
+
+        #region 获取省
+        public ApiReplyModel GetProvince()
+        {
+            ApiReplyModel aj = new ApiReplyModel();
+            aj.isSuccess = true;
+            aj.row = DHelper.DapperC.Select<tbl_city>(null, "districtType=1", "id asc").ToList();
+            return aj;
+        }
+        #endregion
+
+        #region 获取市,区
+        public ApiReplyModel GetCity(int disType,string pid)
+        {
+            ApiReplyModel aj = new ApiReplyModel();
+            aj.isSuccess = true;
+            aj.row = DHelper.DapperC.Select<tbl_city>(null, $" districtType='{disType}' and pid='{pid}'", "id asc").ToList();
             return aj;
         }
         #endregion

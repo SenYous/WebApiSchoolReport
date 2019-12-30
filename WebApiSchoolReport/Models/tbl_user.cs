@@ -26,6 +26,7 @@ namespace Models
 		/// <summary>
 		/// 
 		/// </summary>
+		[DHelper.Attributes.SqlField(Ignore: false, Key: true, identity: true)]
 		public int id
 		{
 			set { _id = value; }
@@ -96,7 +97,7 @@ namespace Models
 			get { return _nickname; }
 		}
 		/// <summary>
-		/// 用户类型
+		/// 用户类型 1:学生，2：老师，0：未知
 		/// </summary>
 		public int? usertype
 		{

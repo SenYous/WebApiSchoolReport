@@ -12,5 +12,7 @@ namespace DAL.IResponse
         ApiReplyModel CheckToken(string token);
         ApiReplyModel GetToken(string token);
         ApiReplyModel InsertNewUser(tbl_user model);
+        ApiReplyModel GetProvince();
+        ApiReplyModel GetCity(int disType, string pid);
     }
 }
