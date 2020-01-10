@@ -1,0 +1,8 @@
+F:\Repos\WebApiSchoolReport\WebApiSchoolReport\Models\bin\Debug\Models.dll
+F:\Repos\WebApiSchoolReport\WebApiSchoolReport\Models\bin\Debug\Models.pdb
+F:\Repos\WebApiSchoolReport\WebApiSchoolReport\Models\bin\Debug\DHelper.dll
+F:\Repos\WebApiSchoolReport\WebApiSchoolReport\Models\bin\Debug\mysql.data.dll
+F:\Repos\WebApiSchoolReport\WebApiSchoolReport\Models\obj\Debug\Models.csprojAssemblyReference.cache
+F:\Repos\WebApiSchoolReport\WebApiSchoolReport\Models\obj\Debug\Models.csproj.CopyComplete
+F:\Repos\WebApiSchoolReport\WebApiSchoolReport\Models\obj\Debug\Models.dll
+F:\Repos\WebApiSchoolReport\WebApiSchoolReport\Models\obj\Debug\Models.pdb

@@ -30,5 +30,15 @@ namespace WebApiSchoolReport.Controllers
         }
         #endregion
 
+
+        #region MongoDB操作
+        [Route("Common/MongoDBPlay")]
+        public ApiReplyModel MongoDBPlay()
+        {
+            ApiReplyModel ret = new ApiReplyModel();
+
+            return ret;
+        }
+        #endregion
     }
 }
